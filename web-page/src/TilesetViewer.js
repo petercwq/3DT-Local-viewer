@@ -124,7 +124,7 @@ class TilesetViewer {
             else {
                 tileset.modelMatrix = Transforms.eastNorthUpToFixedFrame(Cartesian3.fromDegrees(0, 0));
             }
-        }).otherwise((error) => {
+        }).catch((error) => {
             this._tilesetLoadError.raiseEvent(error);
             console.error(error);
         });
